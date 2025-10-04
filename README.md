@@ -45,7 +45,7 @@ _Data in this section cover the period 2000–2020 for U.S. public firms. They c
 ## Code to construct the website-based measures of disclosure
 _Code in this section can easily be tailored to construct the measures for firms outside the U.S. public firm sample (e.g., private firms and international firms), or to extract other topics of interest (e.g., those related to CSR disclosures). There are two steps to follow: i) download website indexes from the Wayback Machine API; ii) compute the disclosure measures from the raw indexes using either the Stata code or the Python code provided._
 
-### Downloading index data from the Wayback Machine API (link)
+### Downloading index data from the Wayback Machine API
 Wayback Machine data are extracted by querying the [Wayback Machine API](https://archive.org/developers/wayback-cdx-server.html) using the following **api_call**.
 
 **http://web.archive.org/cdx/search/cdx?url=www.cecoenviro.com&matchtype=domain&collapse=timestamp:10&matchType=prefix&output=json**
@@ -72,6 +72,10 @@ By parsing each URL, it is possible to associate broad topics with company websi
 
 _This section details how to download and parse the full content of company websites, not just the website indexes. Due to the time-intensive nature of this task, it is best to focus on a small set of firms (e.g., environmental disclosure of Oil & Gas companies, as depicted in the graph below)._
 
+<p align="left">
+  <img src="Docs/images/fig_OA1.jpg" width="70%">
+</p>
+
 The program **[WaybackScraper.py](website_scraping/WaybackScraper.py)** scrapes archived company webpages stored on the Wayback Machine and provides a representation of their textual content using a bag-of-words representation. Please customize the **[config.py](website_scraping/config.py)** file before launching the program.
 
 **Main Parameters** (**[WaybackScraper.py](website_scraping/WaybackScraper.py)**)
@@ -93,7 +97,5 @@ The program **[WaybackScraper.py](website_scraping/WaybackScraper.py)** scrapes 
 - ***parser***: *str, default ‘lxml’* The parser used to parse scraped HTMLs;
 - ***raw***: *bool, default False* Boolean variable indicating whether store the raw HTML text or not.
 
-<p align="left">
-  <img src="Docs/images/fig_OA1.jpg" width="70%">
-</p>
+
 
