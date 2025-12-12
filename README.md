@@ -46,7 +46,7 @@ _Data in this section cover the period 2000–2020 for U.S. public firms. They c
 _Code in this section can easily be tailored to construct the measures for firms outside the U.S. public firm sample (e.g., private firms and international firms), or to extract other topics of interest (e.g., those related to CSR disclosures). There are two steps to follow: i) download website indexes from the Wayback Machine API; ii) compute the disclosure measures from the raw indexes using either the Stata code or the Python code provided._
 
 ### Downloading index data from the Wayback Machine API
-Wayback Machine data are extracted by querying the [Wayback Machine API](https://archive.org/developers/wayback-cdx-server.html) using the following **api_call**.
+Wayback Machine data are extracted by querying the [Wayback Machine API](https://github.com/internetarchive/wayback/tree/master/wayback-cdx-server) using the following **api_call**.
 
 **http://web.archive.org/cdx/search/cdx?url=www.cecoenviro.com&matchtype=domain&collapse=timestamp:10&matchType=prefix&output=json**
 
