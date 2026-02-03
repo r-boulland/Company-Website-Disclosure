@@ -5,7 +5,7 @@
 # Company Websites: A New Measure of Disclosure
 *Romain Boulland, Thomas Bourveau, Matthias Breuer*
 
-This repository contains the data and code to extend the findings of Boulland, Bourveau, and Breuer (2025): "*Company Websites: A New Measure of Disclosure*" (<a href="https://onlinelibrary.wiley.com/doi/10.1111/1475-679X.70007?af=R">Journal of Accounting Research</a>), based on historical website data provided by the <a href="https://web.archive.org/">Wayback Machine</a>.
+This repository contains the data and code to extend the findings of Boulland, Bourveau, and Breuer (2026): "*Company Websites: A New Measure of Disclosure*" (<a href="https://onlinelibrary.wiley.com/doi/10.1111/1475-679X.70007?af=R">Journal of Accounting Research</a>), based on historical website data provided by the <a href="https://web.archive.org/">Wayback Machine</a>.
 
 Data available includes, for the universe of U.S. public firms: i) the main voluntary disclosure measure (*Website Size*); and ii) a content measure, i.e., the fraction of each website that can be attributed to broad topics (*Investor Relations, Product Strategy and Processes, Human Resources, Geography*).
 
@@ -61,7 +61,7 @@ _For large samples, researchers may find it useful to use cloud services (e.g., 
 ### Compute the main disclosure variable (_Website Size_)
 The following code computes the quarterly website-based measure of disclosure.
 - **[A Stata version](Docs/construct_measure/compute_website_size_format.do)**. Because Stata does not natively read JSON files, it is necessary to first translate them into CSV files using the [CSV converter](Docs/construct_measure/json_to_csv.py);
-- **[A Python version](Docs/construct_measure/construct_measure.py)**, which can be executed directly on JSON files.
+- **[A Python version](Docs/construct_measure/compute_measure.py)**, which can be executed directly on JSON files.
 
 ### Compute website content measures
 By parsing each URL, it is possible to associate broad topics with company websites.
